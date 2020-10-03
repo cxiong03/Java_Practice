@@ -7,12 +7,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = "";
-        while(!input.equals("quit")) {
-            System.out.print("Input: ");
+        do {System.out.print("Input: ");
             input = scanner.next().toLowerCase();
             System.out.println(input);
-        }
+        } while(!input.equals("quit"));
     }
 }
 
-// While loop are useful for when we Do Not know how many times we want to repeat something.
+// Do while loop will always run ONCE because it checks the condition last.
