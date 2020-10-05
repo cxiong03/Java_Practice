@@ -1,20 +1,17 @@
 package com.codewithchang;
 
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input = "";
-        while(true) {
-            System.out.print("Input: ");
-            input = scanner.nextLine().toLowerCase();
-            if(input.equals("quit"))
-                break;
-            System.out.println(input);
-        }
+        String[] fruits = { "Apple", "Strawberry", "Orange" };
+
+        // Using the forloop we can iterate from the end to the beginning
+        for (int i = fruits.length; i > 0; i--)
+            System.out.println(fruits[i]);
+
+        // ForEach loops are used to iterate through arrays or collections but its limitation is it's always forward only
+        for (String fruit : fruits)
+            System.out.println(fruit);
     }
 }
 
-// While loop are useful for when we Do Not know how many times we want to repeat something.
