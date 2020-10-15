@@ -3,11 +3,12 @@ package com.codewithchang;
 public class Main {
 
     public static void main(String[] args) {
-        greetUser("Chang", "Xiong");
+        String message = greetUser("Chang", "Xiong");
+        System.out.println(message);
     }
 
-        public static void greetUser(String firstName, String lastName) {
-            System.out.println("Hello " + firstName + " " + lastName);
+        public static String greetUser(String firstName, String lastName) {
+            return "Hello " + firstName + " " + lastName;
         }
 }
 
