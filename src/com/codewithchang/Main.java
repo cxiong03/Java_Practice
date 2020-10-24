@@ -3,20 +3,11 @@ package com.codewithchang;
 public class Main {
 
     public static void main(String[] args) {
-        int baseSalary = 50_000;
-        int extraHours = 10;
-        int hourlyRate = 20;
-
-        int wage = calculateWage(baseSalary, extraHours, hourlyRate);
+        Employee newEmployee = new Employee();
+        newEmployee.baseSalary = 50_000;
+        newEmployee.hourlyRate = 20;
+        int wage = newEmployee.calculateWage(10);
         System.out.println(wage);
-    }
-
-    public static int calculateWage(
-            int baseSalary,
-            int extraHours,
-            int hourlyRate
-    ) {
-        return baseSalary + (extraHours * hourlyRate);
     }
 }
 
