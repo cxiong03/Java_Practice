@@ -4,6 +4,10 @@ public class Employee {
     private int baseSalary;
     private int hourlyRate;
 
+    public Employee(int baseSalary) throws IllegalAccessException {
+        this(baseSalary, 0);
+    }
+
     public Employee(int baseSalary, int hourlyRate) throws IllegalAccessException {
         setBaseSalary(baseSalary);
         setHourlyRate(baseSalary);
@@ -30,7 +34,7 @@ public class Employee {
     private int getHourlyRate() { return hourlyRate; }
 
     private void setHourlyRate(int hourlyRate) {
-        if (hourlyRate <= 0)
+        if (hourlyRate < 0)
             throw new IllegalArgumentException("Hourly rate cannot be 0 or negative.");
         this.hourlyRate = hourlyRate;
     }
