@@ -10,7 +10,11 @@ public class Employee {
     }
 
     public int calculateWage(int extraHours) {
-        return baseSalary + (hourlyRate * extraHours);
+        return baseSalary + (getHourlyRate() * extraHours);
+    }
+
+    public int calculateWage() {
+        return calculateWage(0);
     }
 
     private void setBaseSalary(int baseSalary) throws IllegalAccessException {
