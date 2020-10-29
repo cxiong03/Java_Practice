@@ -4,6 +4,8 @@ public class Employee {
     private int baseSalary;
     private int hourlyRate;
 
+    public static int numberOfEmployees;
+
     public Employee(int baseSalary) throws IllegalAccessException {
         this(baseSalary, 0);
     }
@@ -11,6 +13,11 @@ public class Employee {
     public Employee(int baseSalary, int hourlyRate) throws IllegalAccessException {
         setBaseSalary(baseSalary);
         setHourlyRate(baseSalary);
+        numberOfEmployees++;
+    }
+
+    public static void printNumberOfEmployees() {
+        System.out.println(numberOfEmployees);
     }
 
     public int calculateWage(int extraHours) {
