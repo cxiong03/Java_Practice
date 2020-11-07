@@ -1,7 +1,7 @@
 package com.codewithchang;
 
-public class TextBox {
-    public String text = ""; // Field
+public class TextBox extends UIControl{
+    private String text = ""; // Field
 
     public void setText(String text) {
         this.text = text;

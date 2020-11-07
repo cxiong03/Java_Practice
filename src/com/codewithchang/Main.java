@@ -2,11 +2,10 @@ package com.codewithchang;
 
 public class Main {
 
-    public static void main(String[] args) throws IllegalAccessException {
-        Employee employee = new Employee(50_000, 30);
-        Employee.printNumberOfEmployees();
-        int wage = employee.calculateWage();
-        System.out.println(wage);
+    public static void main(String[] args) {
+        UIControl control = new TextBox();
+        control.disable();
+        System.out.println(control.isEnabled());
     }
 }
 
