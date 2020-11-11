@@ -3,17 +3,10 @@ package com.codewithchang;
 public class Main {
 
     public static void main(String[] args) {
-        UIControl control = new UIControl(true);
-        TextBox textBox = new TextBox();
-        show(textBox);
-    }
-
-    public static void show(UIControl control) {
-        if (control instanceof TextBox) {
-            TextBox textBox = (TextBox) control; // Downcasting
-            textBox.setText("Hello Chang");
-        }
-        System.out.println(control);
+        Point point1 = new Point(1, 2);
+        Point point2 = new Point(1, 2);
+        System.out.println(point1.hashCode());
+        System.out.println(point2.hashCode());
     }
 }
 
