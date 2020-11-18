@@ -8,12 +8,12 @@ public class TaxReport {
         this.calculator = calculator;
     }
 
-    public void show() {
+    public void show(TaxCalculator calculator) {
         var tax = calculator.calculateTax();
         System.out.println(tax);
     }
 
-    public void setCalculator(TaxCalculator calculator) { // setter injection
-        this.calculator = calculator;
-    }
+//    public void setCalculator(TaxCalculator calculator) { // setter injection
+//        this.calculator = calculator;
+//    }
 }
