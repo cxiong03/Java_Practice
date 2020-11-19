@@ -8,7 +8,7 @@ public class TaxReport {
         this.calculator = calculator;
     }
 
-    public void show(TaxCalculator calculator) {
+    public void show(TaxCalculator calculator) { // method injection
         var tax = calculator.calculateTax();
         System.out.println(tax);
     }
